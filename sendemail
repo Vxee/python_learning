@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-”
+#！/usr/bin/env python
+
+import smtplib
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+def email(mail):
+    msg = MIMEText('邮件内容', 'plain', 'utf-8')
+    msg['From'] = formataddr(["测试",'15258691200@163.com'])
+    msg['To'] = formataddr(["走人",mail])
+    msg['Subject'] = "主题"
+    server = smtplib.SMTP("smtp.163.com", 25)
+    server.login("15258691200@163.com", "××××××××")
+    server.sendmail('15258691200@163.com', [mail,], msg.as_string())
+    server.quit()
+email("1109974199@qq.com")
+
+#发邮件给1109974199@qq.com
