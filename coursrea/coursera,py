@@ -157,7 +157,7 @@ def main():
     """
     url  = "https://class.coursera.org/{course}/lecture"
     user_name = "15258691200@163.com"
-    password = "fjl1995"
+    password = "xxxxx"
     spider = Coursera(url.format(course = "python"),user_name,password)
     spider.start_spider()
     
